@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Classic
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+{% for t in time %}
+<h2>Next Classic Tournament will be held on: {{ t.time }}</h2>
+{% endfor %}
+<div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Name: </label>
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                <label>E-Mail: </label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label>Mobile No: </label>
+                {{ form.mobile_no }}
+            </div>
+            <div class="form-group">
+                <label>PUBG ID: </label>
+                {{ form.pubg_id }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+{% endblock %}
