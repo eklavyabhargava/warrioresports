@@ -126,7 +126,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'eklavyabhargawa2@gmail.com'
-EMAIL_HOST_PASSWORD = 'QAZmlp*159753'
+EMAIL_HOST_PASSWORD = '<google_app_password'
 
 
 # Default primary key field type
